@@ -1,0 +1,21 @@
+[package]
+name = "chaos-provider"
+description = "Nele's provider chaos"
+authors = ["nlea <nele@fiberplane.com>"]
+edition = "2023"
+rust-version = { workspace = true }
+version = "1.0.0"
+build = "build.rs"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+fiberplane-pdk = { version="1.0.0" }
+serde = { version = "1", features = ["derive"] }
+
+[build-dependencies]
+vergen = { version = "7.4.2", default-features = false, features = [
+  "build",
+  "git",
+] }
