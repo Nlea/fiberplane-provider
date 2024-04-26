@@ -2,8 +2,7 @@
 name = "chaos-provider"
 description = "Nele's provider chaos"
 authors = ["nlea <nele@fiberplane.com>"]
-edition = "2023"
-rust-version = { workspace = true }
+edition = "2021"
 version = "1.0.0"
 build = "build.rs"
 
@@ -11,11 +10,9 @@ build = "build.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-fiberplane-pdk = { version="1.0.0" }
+fiberplane-models = { version = "=1.0.0-beta.1" }
+fiberplane-pdk = { version = "=1.0.0-beta.1" }
 serde = { version = "1", features = ["derive"] }
 
 [build-dependencies]
-vergen = { version = "7.4.2", default-features = false, features = [
-  "build",
-  "git",
-] }
+vergen = { version = "8.3", default-features = false, features = [ "build", "git", "gitcl" ]}
