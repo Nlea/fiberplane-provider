@@ -1,4 +1,5 @@
 use fiberplane_pdk::prelude::*;
+use fiberplane_pdk::provider_data::ProviderData;
 use serde::{Deserialize, Serialize};
 
 /// Query type for the provider's showcase.
